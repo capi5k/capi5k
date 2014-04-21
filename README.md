@@ -82,8 +82,10 @@ It can be found in the ```roles.rb``` of the module (in node_modules/rabbitmq/ro
 Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```sample```, we need to override the role ```rabbitmq``` by creating a ```roles.rb``` file in the root directory of the projectory.
 
 One situation where it is worth to override the default role is when working with static hostnames (for example outside grid'5000), you could have something like :
+```
 $) cat roles.rb
 role :rabbitmq do
   %w(hostname1, hostname2)
 end
+```
 
