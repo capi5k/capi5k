@@ -1,7 +1,12 @@
 Capi5k
 =======
 
-This is a sample of what capi5k can do.
+Capi5k is an attempt for making the deployments on Grid'5000 (and beyond) easier, reusable and shareable.
+This repository will offer some samples of what can be done with it.
+
+* master branch : install rabbitmq on node(s)
+* nfs branch : install and configure an nfs on nodes.
+
 
 Installation
 ============
