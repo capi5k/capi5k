@@ -14,14 +14,14 @@ $myxp.define_job({
   :retry      => true,
   :goal       => "100%",
   :types      => ["deploy"],
-  :name       => "rabbitmq" , 
+  :name       => "sample" , 
   :command    => "sleep 86400"
 })
 
 $myxp.define_deployment({
   :site           => "#{site}",
   :environment    => "wheezy-x64-nfs",
-  :jobs           => ["rabbitmq"],
+  :jobs           => ["sample"],
   :key            => File.read("#{ssh_public}"), 
 })
 

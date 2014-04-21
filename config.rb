@@ -7,7 +7,7 @@ ssh_options[:keys]= [File.join(ENV["HOME"], ".ssh", "id_rsa"), File.join(ENV["HO
 set :ssh_public,  File.join(ENV["HOME"], ".ssh", "id_rsa_insideg5k.pub")
 
 # G5K global parameters
-set :site, ENV['site'] || "rennes"
+set :site, ENV['site'] || "toulouse"
 set :walltime, ENV['walltime'] || "03:00:00"
 set :subnet, ENV['subnet'] || "slash_18"
 set :vlan, ENV['vlan'] || "-1"
