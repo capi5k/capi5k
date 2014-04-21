@@ -5,7 +5,7 @@ Capi5k is an attempt for making the deployments on Grid'5000 (and beyond) easier
 This repository will offer some samples of what can be done with it.
 
 * master branch : install rabbitmq on node(s)
-* nfs branch : install and configure an nfs on nodes.
+* nfs branch : install and configure an nfs on node(s).
 
 
 Installation
