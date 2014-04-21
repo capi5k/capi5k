@@ -1,4 +1,4 @@
-skeleton_test
-=============
+Sample
+=======
 
-skeleton for capistrano + npm !
+This is a sample of what capi5k can do.
