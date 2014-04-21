@@ -2,10 +2,11 @@ Capi5k
 =======
 
 Capi5k is an attempt for making the deployments on Grid'5000 (and beyond) easier, reusable and shareable.
-This repository will offer some samples of what can be done with it.
+It is based on the use of modules (like nodejs modules, gems ...), each module will install and configure something on nodes. You can write your own modules and publish them so that everyone can reuse them.
 
 * master branch : install rabbitmq on node(s)
 * nfs branch : install and configure an nfs on node(s).
+* hadoop branch : install and configure hadoop on node(s)
 
 
 Installation
