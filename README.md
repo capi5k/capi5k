@@ -1,4 +1,4 @@
-capi5k
-======
+skeleton_test
+=============
 
-capi5k base files. Skeleton project
+skeleton for capistrano + npm !
