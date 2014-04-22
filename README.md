@@ -54,6 +54,7 @@ Setup
 
 Change the ```config.rb``` file accordingly to your parameters.
 
+Note that with the gateway set, you will run the scripts directly from your local computer.
 
 Usage
 =====
