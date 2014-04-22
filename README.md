@@ -24,6 +24,7 @@ username: "###"
 password: "###"
 ```
 
+See the wiki for further information and how to : https://github.com/capi5k/capi5k/wiki
 
 
 Installation
