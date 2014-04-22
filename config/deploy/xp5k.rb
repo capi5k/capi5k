@@ -2,7 +2,6 @@ require 'bundler/setup'
 require 'rubygems'
 require 'xp5k'
 require 'erb'
-load 'config/deploy.rb' 
 
 XP5K::Config.load
 

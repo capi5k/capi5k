@@ -7,8 +7,6 @@ require 'colored'
 
 
 load "config/deploy.rb"
-load "config.rb"
-load "config/deploy/xp5k.rb"
 
 desc 'Automatic deployment'
 task :automatic do
