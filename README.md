@@ -10,6 +10,8 @@ The purpose of this repository is to show some examples of what can be done with
 * nfs branch : install and configure an nfs on node(s).
 * hadoop branch : install and configure hadoop on node(s)
 
+See the wiki for further information and how to : https://github.com/capi5k/capi5k/wiki
+
 Prerequisites
 =============
 
