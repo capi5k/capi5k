@@ -4,6 +4,8 @@ Capi5k
 Capi5k is an attempt for making the deployments on Grid'5000 (and beyond) easier, reusable and shareable.
 It is based on the use of modules (like nodejs modules, gems ...), each module will install and configure something on nodes. You can write your own modules and publish them so that everyone can reuse them.
 
+It consist in a set of convention over Capisatrano, and npm. It also makes use of xp5k for job submssion and deployment on Grid'5000. 
+
 The purpose of this repository is to show some examples of what can be done with capi5k : 
 
 * master branch : install rabbitmq on node(s)
