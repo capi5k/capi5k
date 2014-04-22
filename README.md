@@ -10,6 +10,21 @@ The purpose of this repository is to show some examples of what can be done with
 * nfs branch : install and configure an nfs on node(s).
 * hadoop branch : install and configure hadoop on node(s)
 
+Prerequisites
+=============
+
+* ruby environment. Use rvm or rbenv and bundler.
+* npm : nodejs package manager is used to manage modules dependencies
+* restfully configured : 
+
+```
+$) cat ~/.restfully/api.grid5000.fr.yml 
+base_uri: https://api.grid5000.fr/3.0
+username: "###"
+password: "###"
+```
+
+
 
 Installation
 ============
