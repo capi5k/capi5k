@@ -49,6 +49,12 @@ rabbitmq@0.0.1 node_modules/rabbitmq
 
 You're done with the installation.
 
+Setup
+=====
+
+Change the ```config.rb``` file accordingly to your parameters.
+
+
 Usage
 =====
 
