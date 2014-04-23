@@ -109,7 +109,7 @@ Roles
 Each module is shipped with predefined roles. For instance the rabbitmq module needs only one role wich define what nodes should have rabbitmq installed.
 It can be found in the ```roles.rb``` of the module (in node_modules/rabbitmq/roles.rb). By default rabbitmq will be installed on nodes belonging to an xp5k roles or job with name ```rabbitmq```.
 
-Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```sample```, we need to override the role ```rabbitmq``` by creating a ```roles.rb``` file in the root directory of the projectory.
+Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```sample```, we need to override (see the wiki for considerations on this point) the role ```rabbitmq``` by creating a ```roles.rb``` file in the root directory of the projectory.
 
 One situation where it is worth to override the default role is when working with static hostnames (for example outside grid'5000), you could have something like :
 ```
