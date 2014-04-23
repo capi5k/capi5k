@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/capi5k",
   "dependencies": {
-    "rabbitmq": "git://github.com/capi5k/capi5k-rabbitmq" 
+    "rabbitmq": "https://github.com/capi5k/capi5k-rabbitmq/tarball/master" 
    }
 }
