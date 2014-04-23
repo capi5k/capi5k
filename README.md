@@ -115,7 +115,7 @@ One situation where it is worth to override the default role is when working wit
 ```
 $) cat roles.rb
 def role_rabbitmq
-  $myxp.get_deployed_nodes('sample')
+  %w(server1 server2)
 end
 ```
 
