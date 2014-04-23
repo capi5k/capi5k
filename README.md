@@ -114,8 +114,8 @@ Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```s
 One situation where it is worth to override the default role is when working with static hostnames (for example outside grid'5000), you could have something like :
 ```
 $) cat roles.rb
-role :rabbitmq do
-  %w(hostname1, hostname2)
+def role_rabbitmq
+  $myxp.get_deployed_nodes('sample')
 end
 ```
 
