@@ -4,11 +4,31 @@ Capi5k
 Capi5k is an attempt for making the deployments on Grid'5000 (and beyond) easier, reusable and shareable.
 It is based on the use of modules (like nodejs modules, gems ...), each module will install and configure something on nodes. You can write your own modules and publish them so that everyone can reuse them.
 
+It consist in a set of convention over Capisatrano, and npm. It also makes use of xp5k for job submssion and deployment on Grid'5000. 
+
 The purpose of this repository is to show some examples of what can be done with capi5k : 
 
 * master branch : install rabbitmq on node(s)
 * nfs branch : install and configure an nfs on node(s).
 * hadoop branch : install and configure hadoop on node(s)
+
+See the wiki for further information and how to : https://github.com/capi5k/capi5k/wiki
+
+Prerequisites
+=============
+
+* ruby environment. Use rvm or rbenv and bundler.
+* npm : nodejs package manager is used to manage modules dependencies
+* restfully configured : 
+
+```
+$) cat ~/.restfully/api.grid5000.fr.yml 
+base_uri: https://api.grid5000.fr/3.0
+username: "###"
+password: "###"
+```
+
+See the wiki for further information and how to : https://github.com/capi5k/capi5k/wiki
 
 
 Installation
@@ -89,7 +109,7 @@ Roles
 Each module is shipped with predefined roles. For instance the rabbitmq module needs only one role wich define what nodes should have rabbitmq installed.
 It can be found in the ```roles.rb``` of the module (in node_modules/rabbitmq/roles.rb). By default rabbitmq will be installed on nodes belonging to an xp5k roles or job with name ```rabbitmq```.
 
-Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```sample```, we need to override the role ```rabbitmq``` by creating a ```roles.rb``` file in the root directory of the projectory.
+Since we deploy using ```config/deploy/xp5k``` wich defined a job with name ```sample```, we need to override (see the wiki for considerations on this point) the role ```rabbitmq``` by creating a ```roles.rb``` file in the root directory of the projectory.
 
 One situation where it is worth to override the default role is when working with static hostnames (for example outside grid'5000), you could have something like :
 ```
