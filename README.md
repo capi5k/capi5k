@@ -165,3 +165,15 @@ Enter passphrase for /Users/msimonin/.ssh/id_rsa:
 * serf
 * nfs
 * cassandra
+* 
+
+# Future
+
+
+There is so much to do ! but 
+
+* have an ad hoc package manager
+
+can participate to improve the idea of capi5k.
+
+
