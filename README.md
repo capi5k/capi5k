@@ -10,7 +10,9 @@ and [npm](https://www.npmjs.org/). It also makes use of
 on [Grid'5000](https://grid5000.fr).
 
 
-# Prerequisites
+# Getting started
+
+## Prerequisites
 
 
 * ruby environment. Use rvm or rbenv and bundler.
@@ -25,7 +27,7 @@ password: "###"
 ```
 
 
-# Your first project
+## Your first project
 
 
 Download the skeleton of a project.
@@ -54,7 +56,7 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 You're done with the installation.
 
-# Setup
+## Setup
 
 
 ```
@@ -71,13 +73,13 @@ capi5k-init ➤ tree -L 2                                                       
 └── package.json    # description of the capi5k project + dependencies declaration
 ```
 
-## SSH keys
+### SSH keys
 
 Change the ```config.rb``` file accordingly to your parameters.
 
 Note that with the gateway set, you will run the scripts directly from your local computer.
 
-## Test your installation
+### Test your installation
 
 * Run ``` cap -T ``` and you should see :
 
@@ -126,7 +128,7 @@ Summary of the deployment
          capi5k-init                   2                   0
 ```
 
-## Add a role
+### Add a role
 
 * Open the ```Capfile```and aadd the following :
 
