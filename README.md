@@ -79,7 +79,7 @@ Note that with the gateway set, you will run the scripts directly from your loca
 
 ## Test your installation
 
-Run ``` cap -T ``` and you should see :
+* Run ``` cap -T ``` and you should see :
 
 ```
 capi5k-init ➤ cap -T                                                                                                                                                                            git:master*
@@ -99,7 +99,7 @@ Extended help may be available for these tasks.
 Type `cap -e taskname' to view it.
 ```
 
-Then try to submit a job :
+* Then try to submit a job :
 
 ```
 capi5k-init ➤ cap submit                                                                                                                                                                        git:master*
@@ -108,15 +108,20 @@ capi5k-init ➤ cap submit                                                      
 .. [OK]
 ```
 
-See the file : ``config/deploy/xp5k.rb```to see the description of the job.
+See the file : ```config/deploy/xp5k.rb``` to see the description of the job.
 
 If something wrong here, check your *restfully* configuration.
 
-Then try to deploy your nodes :
+* Then try to deploy your nodes :
 
 ```
 capi5k-init ➤ cap deploy                                                                                                                                                                        git:master*
   * 2014-05-11 11:44:38 executing `deploy'
  ** Waiting for all the deployments to be terminated...
 ............... [OK]
+Summary of the deployment
+------------------------------------------------------------
+                Name            Deployed          Undeployed
+------------------------------------------------------------
+         capi5k-init                   2                   0
 ```
