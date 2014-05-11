@@ -1,53 +1,67 @@
 <!doctype html>
+<!--
+
+  Instructions:
+
+  - Save this file.
+  - Replace "USER" with your GitHub username.
+  - Replace "REPO" with your GitHub repo name.
+  - Replace "Your Project" with your project name.
+  - Upload this file (or commit to GitHub Pages).
+
+  Customize as you see fit!
+
+-->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Capi5k by capi5k</title>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Capi5k</h1>
+  <title>Your Project</title>
 
-        <ul>
-          <li><a href="https://github.com/capi5k/capi5k-init/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/capi5k/capi5k-init/tarball/master">Download <strong>TAR Ball</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Getting started</h1>
+  <!-- Flatdoc -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='http://rstacruz.github.io/flatdoc/v/0.8.1/legacy.js'></script>
+  <script src='http://rstacruz.github.io/flatdoc/v/0.8.1/flatdoc.js'></script>
 
-        <ol>
-          <li>Download the tarball / zip</li>
-          <li>Extract it </li>
-          <li>Run <pre>cap -T</pre></li>
-        </ol>
-      </section>
+  <!-- Flatdoc theme -->
+  <link  href='http://rstacruz.github.io/flatdoc/v/0.8.1/theme-white/style.css' rel='stylesheet'>
+  <script src='http://rstacruz.github.io/flatdoc/v/0.8.1/theme-white/script.js'></script>
 
-      <section>
-        <h1>Learn more</h1>
+  <!-- Meta -->
+  <meta content="Your Project" property="og:title">
+  <meta content="Your Project description goes here." name="description">
 
-        see <a href="https://github.com/capi5k/capi5k/wiki">the wiki</a>
+  <!-- Initializer -->
+  <script>
+    Flatdoc.run({
+      fetcher: Flatdoc.github('capi5k/capi5k')
+    });
+  </script>
+</head>
+<body role='flatdoc'>
 
-      </section>
-
-      <section>
-          <h1>
-            Note
-          </h1>
-           This is very very experimental stack .
-      </section>
-
+  <div class='header'>
+    <div class='left'>
+      <h1>Your Project</h1>
+      <ul>
+        <li><a href='https://github.com/USER/REPO'>View on GitHub</a></li>
+        <li><a href='https://github.com/USER/REPO/issues'>Issues</a></li>
+      </ul>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <div class='right'>
+      <!-- GitHub buttons: see http://ghbtns.com -->
+      <iframe src="http://ghbtns.com/github-btn.html?user=USER&amp;repo=REPO&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    </div>
+  </div>
 
-  </body>
+  <div class='content-root'>
+    <div class='menubar'>
+      <div class='menu section' role='flatdoc-menu'></div>
+    </div>
+    <div role='flatdoc-content' class='content'></div>
+  </div>
+
+</body>
 </html>
