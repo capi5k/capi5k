@@ -158,3 +158,10 @@ Enter passphrase for /Users/msimonin/.ssh/id_rsa:
  ** [out :: graphite-4.nancy.grid5000.fr] Sun May 11 11:54:32 CEST 2014
     command finished in 270ms
 ```
+
+# Available capi5k-modules
+
+* hadoop
+* serf
+* nfs
+* cassandra
