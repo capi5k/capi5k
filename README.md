@@ -41,8 +41,8 @@ capi5k-init ➤ capi5k-init
 ```
 
 
-First the needed gems, we assume that bundle is installed.
- We encourage to use rvm or rbenv to manage your ruby environment.
+We assume that bundle is installed.
+We encourage to use rvm or rbenv to manage your ruby environment.
 ```
 capi5k-init ➤ bundle install
 [...]
