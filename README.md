@@ -175,6 +175,7 @@ You can check : https://github.com/capi5k
 There is so much to do ! but 
 
 * have an ad hoc package manager
+* ?
 
 can participate to improve the idea of capi5k.
 
