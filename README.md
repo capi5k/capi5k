@@ -5,7 +5,7 @@ each module will install and configure something on nodes.
 You can write your own modules and publish them so that everyone can reuse them.
 
 It consists in a set of convention over [Capistrano (v2)](https://github.com/capistrano),
-and [npm](https://www.npmjs.org/). It also makes use of
+and [npm](https://www.npmjs.org/) (?!). It also makes use of
 [xp5k](https://github.com/pmorillo/xp5k) for job submssion and deployment
 on [Grid'5000](https://grid5000.fr).
 
