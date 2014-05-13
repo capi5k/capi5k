@@ -3,7 +3,7 @@ Capi5k is a **proof of concept** for making the deployments on Grid'5000
 
 It consists in a set of conventions over [Capistrano (v2)](https://github.com/capistrano),
 and [bower](http://bower.io/). It also makes use of
-[xp5k](https://github.com/pmorillo/xp5k) for job submission and deployment
+[xp5k](https://github.com/pmorillo/xp5k) for job submissions and deployments
 on [Grid'5000](https://grid5000.fr).
 
 # At a glance
