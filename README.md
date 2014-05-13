@@ -181,12 +181,16 @@ Enter passphrase for /Users/msimonin/.ssh/id_rsa:
     command finished in 270ms
 ```
 
-# Available capi5k-modules
+# Add dependencies to your project
+
+The dependencies are for the moment available as git repo. 
+Avalaible modules : 
 
 * hadoop
 * serf
 * nfs
 * cassandra
+* puppet
 * ?
 
 You can check : https://github.com/capi5k
@@ -196,7 +200,7 @@ You can check : https://github.com/capi5k
 
 There is so much to do ! but 
 
-* ...
+* to have a decent documentation
 * ?
 
 can participate to improve the idea of capi5k.
