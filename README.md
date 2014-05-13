@@ -8,7 +8,7 @@ on [Grid'5000](https://grid5000.fr).
 
 # At a glance
 
-This are typical workflows in use in capi5k.
+These are typical workflows in use in capi5k.
 
 ## Run an experiment
 
