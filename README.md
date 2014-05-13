@@ -1,12 +1,9 @@
 Capi5k is a **proof of concept** for making the deployments on Grid'5000
 (and beyond) easier, reusable and shareable.
-It is based on the use of modules (like nodejs modules, gems ...),
-each module will install and configure something on nodes.
-You can write your own modules and publish them so that everyone can reuse them.
 
 It consists in a set of convention over [Capistrano (v2)](https://github.com/capistrano),
-and [npm](https://www.npmjs.org/). It also makes use of
-[xp5k](https://github.com/pmorillo/xp5k) for job submssion and deployment
+and [bower](http://bower.io/). It also makes use of
+[xp5k](https://github.com/pmorillo/xp5k) for job submission and deployment
 on [Grid'5000](https://grid5000.fr).
 
 
@@ -16,7 +13,8 @@ on [Grid'5000](https://grid5000.fr).
 
 
 * ruby environment. Use rvm or rbenv and bundler.
-* npm : nodejs package manager is used to manage modules dependencies
+* bower : the package manager.
+
 * restfully configured :
 
 ``` yaml
@@ -26,25 +24,25 @@ username: "###"
 password: "###"
 ```
 
+* xpm, the command line tool on top of capi5k, installed : 
+
+```
+$) gem install xpm
+```
 
 ## Your first project
 
 
-Download the skeleton of a project.
-It can be achieve by downloading the tarball / zip or cloning the repository
-```capi5k-init```. See the links in the header.
-
-Inside the repository, install the gem dependencies (Capistrano, Xp5k ...)
+Initialize a new project : 
 
 ```
-capi5k-init ➤ capi5k-init
+xpm new myproject
 ```
 
-
-First the needed gems, we assume that bundle is installed.
- We encourage to use rvm or rbenv to manage your ruby environment.
+We assume that bundle is installed.
+We encourage to use rvm or rbenv to manage your ruby environment.
 ```
-capi5k-init ➤ bundle install
+myproject ➤ bundle install
 [...]
 Using term-ansicolor (1.3.0)
 Using xp5k (0.0.5) from https://github.com/msimonin/xp5k.git (at redeploy)
@@ -60,17 +58,19 @@ You're done with the installation.
 
 
 ```
-capi5k-init ➤ tree -L 2                                                                                                                                                                          git:master
+myproject ➤ tree -L 2                                                                                                                                                                                      
 .
-├── Capfile         # entry point of the project
-├── Gemfile         # manage ruby dependencies
-├── README.md       # readme
+├── Capfile
+├── Gemfile
+├── README.md
+├── bower.json
 ├── config
-│   ├── deploy      # contains xp5k deployment files
-│   ├── deploy.rb   # load capi5k dependency (do not edit it)
-│   └── lib         # ruby lib
-├── config.rb       # specific parameters (ssh keys, walltime, site)
-└── package.json    # description of the capi5k project + dependencies declaration
+│   ├── deploy
+│   ├── deploy.rb
+│   └── lib
+└── config.rb
+
+3 directories, 6 files
 ```
 
 ### SSH keys
@@ -84,7 +84,7 @@ Note that with the gateway set, you will run the scripts directly from your loca
 * Run ``` cap -T ``` and you should see :
 
 ```
-capi5k-init ➤ cap -T                                                                                                                                                                            git:master*
+myproject ➤ cap -T                                                                                                                                                                            
 cap automatic # Automatic deployment
 cap clean     # Remove all running jobs
 cap deploy    # Deploy with Kadeploy
@@ -104,7 +104,7 @@ Type `cap -e taskname' to view it.
 * Then try to submit a job :
 
 ```
-capi5k-init ➤ cap submit                                                                                                                                                                        git:master*
+myproject ➤ cap submit                                                                                                                                                                       
   * 2014-05-11 11:42:37 executing `submit'
  ** Waiting for the job init #562301 to be running at nancy...
 .. [OK]
@@ -117,7 +117,7 @@ If something wrong here, check your *restfully* configuration.
 * Then try to deploy your nodes :
 
 ```
-capi5k-init ➤ cap deploy                                                                                                                                                                        git:master*
+myproject➤ cap deploy                                                                                                                                                                        
   * 2014-05-11 11:44:38 executing `deploy'
  ** Waiting for all the deployments to be terminated...
 ............... [OK]
@@ -140,8 +140,8 @@ end
 
 * Test the connection to your deployed nodes :
 
-````
-capi5k-init ➤ cap invoke COMMAND="date" ROLES="test" USER="root"                                                                                                                                git:master*
+```
+myproject ➤ cap invoke COMMAND="date" ROLES="test" USER="root"                                                                                                                                
   * 2014-05-11 11:54:41 executing `invoke'
   * executing multiple commands in parallel
     -> "else" :: "date"
@@ -158,3 +158,25 @@ Enter passphrase for /Users/msimonin/.ssh/id_rsa:
  ** [out :: graphite-4.nancy.grid5000.fr] Sun May 11 11:54:32 CEST 2014
     command finished in 270ms
 ```
+
+# Available capi5k-modules
+
+* hadoop
+* serf
+* nfs
+* cassandra
+* ?
+
+You can check : https://github.com/capi5k
+
+# Future
+
+
+There is so much to do ! but 
+
+* ...
+* ?
+
+can participate to improve the idea of capi5k.
+
+
