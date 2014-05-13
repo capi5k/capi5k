@@ -13,7 +13,7 @@ This are typical workflows in use in capi5k.
 ## Run an experiment
 
 ```
-git clone <some repo with great experiments/deployments> project  # gets the shared experiment / deployment
+git clone <some repo with great experiments/deployments> project 
 cd project
 xpm install    # install all the dependencies
 cap automatic  # run it
