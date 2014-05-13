@@ -1,11 +1,32 @@
 Capi5k is a **proof of concept** for making the deployments on Grid'5000
 (and beyond) easier, reusable and shareable.
 
-It consists in a set of convention over [Capistrano (v2)](https://github.com/capistrano),
+It consists in a set of conventions over [Capistrano (v2)](https://github.com/capistrano),
 and [bower](http://bower.io/). It also makes use of
 [xp5k](https://github.com/pmorillo/xp5k) for job submission and deployment
 on [Grid'5000](https://grid5000.fr).
 
+# At a glance
+
+This are typical workflows in use in capi5k.
+
+## Run an experiment
+
+```
+git clone <some repo with great experiments/deployments> project  # gets the shared experiment / deployment
+cd project
+xpm install    # install all the dependencies
+cap automatic  # run it
+```
+
+## Create a new project
+
+```
+xpm new project
+cd project
+<create your experiments/scripts, add dependencies ... >
+git commit/push
+```
 
 # Getting started
 
