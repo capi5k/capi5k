@@ -8,13 +8,14 @@ on [Grid'5000](https://grid5000.fr).
 
 # At a glance
 
-These are typical workflows in use in capi5k.
+These are typical workflows currently in use in capi5k.
 
 ## Run an experiment
 
 ```
 git clone <some repo with great experiments/deployments> project 
 cd project
+[bundle install]
 xpm install    # install all the dependencies
 cap automatic  # run it
 ```
