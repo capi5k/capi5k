@@ -20,7 +20,7 @@ xpm install    # install all the dependencies
 cap automatic  # run it
 ```
 
-## Create a new project
+## Create a new experiment
 
 ```
 xpm new project
