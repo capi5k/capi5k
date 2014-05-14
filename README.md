@@ -33,7 +33,7 @@ git commit/push
 
 ## Prerequisites
 
-
+You can refer to the dedicated [wiki page](https://github.com/capi5k/capi5k/wiki/Prerequisites) for further information. 
 * ruby environment. Use rvm or rbenv and bundler.
 * bower : the package manager.
 
