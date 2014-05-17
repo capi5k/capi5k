@@ -6,7 +6,7 @@ and [bower](http://bower.io/). It also makes use of
 [xp5k](https://github.com/pmorillo/xp5k) for job submissions and deployments
 on [Grid'5000](https://grid5000.fr).
 
-
+[Prerequisites >](https://github.com/capi5k/capi5k/wiki/Prerequisites)
 [Wiki >](https://github.com/capi5k/capi5k/wiki)
  
 
