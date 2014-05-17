@@ -8,7 +8,7 @@ on [Grid'5000](https://grid5000.fr).
 
 [Prerequisites >](https://github.com/capi5k/capi5k/wiki/Prerequisites)
 [Wiki >](https://github.com/capi5k/capi5k/wiki)
- 
+[Project Home >](https://github.com/capi5k)
 
 ## Your first project
 
