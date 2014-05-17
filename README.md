@@ -6,53 +6,9 @@ and [bower](http://bower.io/). It also makes use of
 [xp5k](https://github.com/pmorillo/xp5k) for job submissions and deployments
 on [Grid'5000](https://grid5000.fr).
 
-[Capistrano (v2) >](https://github.com/capistrano) 
 
-# At a glance
+[wiki page >](https://github.com/capi5k/capi5k/wiki)
 
-These are typical workflows currently in use in capi5k.
-
-## Run an experiment
-
-```
-git clone <some repo with great experiments/deployments> project 
-cd project
-[bundle install]
-xpm install    # install all the dependencies
-cap automatic  # run it
-```
-
-## Create a new experiment
-
-```
-xpm new project
-cd project
-<create your experiments/scripts, add dependencies ... >
-git commit/push
-```
-
-# Getting started
-
-## Prerequisites
-
-You can refer to the dedicated [wiki page](https://github.com/capi5k/capi5k/wiki/Prerequisites) for further information. 
-* ruby environment. Use rvm or rbenv and bundler.
-* bower : the package manager.
-
-* restfully configured :
-
-``` yaml
-$) cat ~/.restfully/api.grid5000.fr.yml
-base_uri: https://api.grid5000.fr/3.0
-username: "###"
-password: "###"
-```
-
-* xpm, the command line tool on top of capi5k, installed : 
-
-```
-$) gem install xpm
-```
 
 ## Your first project
 
