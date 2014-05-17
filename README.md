@@ -48,9 +48,11 @@ myproject ➤ tree -L 2
 │   ├── deploy
 │   ├── deploy.rb
 │   └── lib
-└── config.rb
-
-3 directories, 6 files
+├── config.rb
+├── output.rb
+├── recipe.rb
+├── roles.rb
+└── roles_definition.rb
 ```
 
 ### SSH keys
