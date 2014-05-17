@@ -110,7 +110,7 @@ Summary of the deployment
 
 ### Add a role
 
-* Open the ```Capfile```and aadd the following :
+* Open the ```Capfile```and add the following :
 
 ```ruby
 role :test do
