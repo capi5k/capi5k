@@ -6,6 +6,8 @@ and [bower](http://bower.io/). It also makes use of
 [xp5k](https://github.com/pmorillo/xp5k) for job submissions and deployments
 on [Grid'5000](https://grid5000.fr).
 
+[Capistrano (v2)](https://github.com/capistrano) >
+
 # At a glance
 
 These are typical workflows currently in use in capi5k.
