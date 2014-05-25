@@ -57,9 +57,16 @@ myproject ➤ tree -L 2
 
 ### SSH keys
 
-Change the ```config.rb``` file accordingly to your parameters.
-
-Note that with the gateway set, you will run the scripts directly from your local computer.
+The ssh keys configuration will be read from ```~/.xpm/connection.rb```.
+```ruby
+set :g5k_user, "msimonin"
+# gateway
+set :gateway, "#{g5k_user}@access.grid5000.fr"
+# # This key will used to access the gateway and nodes
+ssh_options[:keys]= [File.join(ENV["HOME"], ".ssh", "id_rsa"), File.join(ENV["HOME"], ".ssh", "id_rsa_insideg5k")]
+# # This key will be installed on nodes
+set :ssh_public,  File.join(ENV["HOME"], ".ssh", "id_rsa_insideg5k.pub")
+```
 
 ### Test your installation
 
