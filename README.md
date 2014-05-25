@@ -101,7 +101,7 @@ myproject ➤ cap submit
 
 See the file : ```config/deploy/xp5k.rb``` to see the description of the job.
 
-If something wrong here, check your *restfully* configuration.
+If something went wrong here, check your *restfully* configuration.
 
 * Then try to deploy your nodes :
 
