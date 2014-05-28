@@ -58,6 +58,9 @@ myproject ➤ tree -L 2
 ### SSH keys
 
 The ssh keys configuration will be read from ```~/.xpm/connection.rb```.
+
+Note that if the gateway is set, you can run the program from your local computer.
+
 ```ruby
 set :g5k_user, "msimonin"
 # gateway
