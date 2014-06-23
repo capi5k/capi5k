@@ -170,8 +170,8 @@ You can check : https://github.com/capi5k
 
 There is so much to do ! but 
 
-* to have a decent documentation
-* ?
+* to have a decent documentation.
+* move the dependency management to librarian in order to have a full ruby implementation.
 
 can participate to improve the idea of capi5k.
 
