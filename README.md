@@ -10,52 +10,33 @@ on [Grid'5000](https://grid5000.fr).
 [Wiki >](https://github.com/capi5k/capi5k/wiki)
 [Project Home >](https://github.com/capi5k)
 
-## Getting started
+## Quick start
 
+### Initialization
 
-Initialize a new project : 
+* Initializa a new project :
 
-```
-xpm new myproject
-```
-
-We assume that bundle is installed.
-We encourage to use rvm or rbenv to manage your ruby environment.
-```
-myproject ➤ bundle install
-[...]
-Using term-ansicolor (1.3.0)
-Using xp5k (0.0.5) from https://github.com/msimonin/xp5k.git (at redeploy)
-Using bundler (1.5.3)
-Your bundle is complete!
-Use `bundle show [gemname]` to see where a bundled gem is installed.
-
+```bash
+$) xpm init hello
 ```
 
-You're done with the installation.
+* This will download a skeleton project under the ```hello```directory.
 
-## Setup
+Move to the project directory
 
-
+```bash
+$) cd hello
 ```
-myproject ➤ tree -L 2                                                                                                                                                                                      
-.
-├── Capfile
-├── Gemfile
-├── README.md
-├── bower.json
-├── config
-│   ├── deploy
-│   ├── deploy.rb
-│   └── lib
-├── config.rb
-├── output.rb
-├── recipe.rb
-├── roles.rb
-└── roles_definition.rb
+If you use [rvm](http://rvm.io) you'll move to a new gemset.
+
+* Install runtime dependencies (capistrano, xp5k ...)
+
+```bash
+$) bundle install
 ```
 
-### SSH keys
+### Ssh configuration
+
 
 The ssh keys configuration will be read from ```~/.xpm/connection.rb```.
 ```ruby
@@ -63,37 +44,31 @@ set :g5k_user, "msimonin"
 # gateway
 set :gateway, "#{g5k_user}@access.grid5000.fr"
 # # This key will used to access the gateway and nodes
-ssh_options[:keys]= [File.join(ENV["HOME"], ".ssh", "id_rsa"), File.join(ENV["HOME"], ".ssh", "id_rsa_insideg5k")]
+ssh_options[:keys]= [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 # # This key will be installed on nodes
-set :ssh_public,  File.join(ENV["HOME"], ".ssh", "id_rsa_insideg5k.pub")
+set :ssh_public,  File.join(ENV["HOME"], ".ssh", "id_rsa.pub")
 ```
 
-### Test your installation
+### Validate the installation
 
 * Run ``` cap -T ``` and you should see :
 
 ```
-myproject ➤ cap -T                                                                                                                                                                            
+$)  cap -T
 cap automatic # Automatic deployment
 cap clean     # Remove all running jobs
 cap deploy    # Deploy with Kadeploy
 cap describe  # Describe the cluster
 cap invoke    # Invoke a single command on the remote servers.
+cap myproject # TODO : myproject task
 cap shell     # Begin an interactive Capistrano session.
 cap submit    # Submit jobs
-
-Some tasks were not listed, either because they have no description,
-or because they are only used internally by other tasks. To see all
-tasks, type `cap -vT'.
-
-Extended help may be available for these tasks.
-Type `cap -e taskname' to view it.
 ```
 
 * Then try to submit a job :
 
 ```
-myproject ➤ cap submit                                                                                                                                                                       
+$) cap submit
   * 2014-05-11 11:42:37 executing `submit'
  ** Waiting for the job init #562301 to be running at nancy...
 .. [OK]
@@ -101,12 +76,12 @@ myproject ➤ cap submit
 
 See the file : ```config/deploy/xp5k.rb``` to see the description of the job.
 
-If something went wrong here, check your *restfully* configuration.
+If something went wrong here, check your *[restfully](http://github.com/crohr/restfully)* configuration.
 
 * Then try to deploy your nodes :
 
 ```
-myproject➤ cap deploy                                                                                                                                                                        
+$) cap deploy
   * 2014-05-11 11:44:38 executing `deploy'
  ** Waiting for all the deployments to be terminated...
 ............... [OK]
@@ -117,20 +92,14 @@ Summary of the deployment
          capi5k-init                   2                   0
 ```
 
-### Add a role
+### First command
 
-* Open the ```Capfile```and add the following :
-
-```ruby
-role :test do
-  $myxp.get_deployed_nodes('capi5k-init')
-end
-```
+A capistrano role is defined in ```roles.rb```.
 
 * Test the connection to your deployed nodes :
 
 ```
-myproject ➤ cap invoke COMMAND="date" ROLES="test" USER="root"                                                                                                                                
+$) cap invoke COMMAND="date" ROLES="myrole" USER="root"
   * 2014-05-11 11:54:41 executing `invoke'
   * executing multiple commands in parallel
     -> "else" :: "date"
@@ -148,28 +117,29 @@ Enter passphrase for /Users/msimonin/.ssh/id_rsa:
     command finished in 270ms
 ```
 
-# Add dependencies to your project
+* You can define the command (and many others) inside the Capfile.
 
-The dependencies are for the moment available as git repo. 
-Avalaible modules : 
+```ruby
+namespace :myproject do
 
-* hadoop
-* serf
-* nfs
-* cassandra
-* puppet
-* ?
+  desc 'TODO : myproject task'
+  task :default do
+    date
+    # other tasks can be added here
+  end
 
-You can check : https://github.com/capi5k
+  desc 'run date command'
+  task :date, :roles => [:myrole] do
+    set :user,"root"
+    run "date"
+  end
+end
+```
 
-# Future
+You can launch the ```date``` task by invoking :
+  * ```cap myproject```, this will call all the task written in the ```default``` block,
+  * or ```cap myproject:date```
 
+## Create a module
 
-There is so much to do ! but 
-
-* to have a decent documentation
-* ?
-
-can participate to improve the idea of capi5k.
-
-
+soon
