@@ -11,6 +11,14 @@ on [Grid'5000](https://grid5000.fr).
 
 ## Quick start (aka. quick setup)
 
+The quick start will give you a quick overview of what can be done using the project.
+
+At the end you'll be able to
+* submit a job
+* deploy nodes
+* run command on nodes
+* make basic customizations (e.g. changing the number of nodes, defining tasks, grouping nodes into roles)
+
 ### Initialization
 
 * Initializa a new project :
@@ -125,6 +133,12 @@ You can launch the ```date``` task by invoking :
 
   * ```cap myproject```, this will call all the tasks written in the ```default``` block,
   * or simply ```cap myproject:date```
+
+### Wrap up
+
+  * submission parameters are controlled in ```config/deploy/xp5k.rb````
+  * capistrano roles are defined in ```roles.rb```
+  * custom tasks applying on roles can be added in the ```Capfile```
 
 ## Further readings
 
