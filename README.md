@@ -39,6 +39,9 @@ $) bundle install
 
 
 The ssh keys configuration will be read from ```~/.xpm/connection.rb```.
+
+Note that if the gateway is set, you can run the program from your local computer.
+
 ```ruby
 set :g5k_user, "msimonin"
 # gateway
@@ -139,6 +142,7 @@ end
 You can launch the ```date``` task by invoking :
   * ```cap myproject```, this will call all the task written in the ```default``` block,
   * or ```cap myproject:date```
+
 
 ## Create a module
 
