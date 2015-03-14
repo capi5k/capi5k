@@ -126,6 +126,11 @@ You can launch the ```date``` task by invoking :
   * ```cap myproject```, this will call all the tasks written in the ```default``` block,
   * or simply ```cap myproject:date```
 
+## Further readings
+
+[xp5k >](https://github.com/pmorillo/xp5k)
+[capistrano v2 >](https://github.com/capistrano/capistrano/wiki)
+
 
 ## Create a module  (aka. complete setup)
 
