@@ -123,6 +123,7 @@ end
 ```
 
 You can launch the ```date``` task by invoking :
+
   * ```cap myproject```, this will call all the tasks written in the ```default``` block,
   * or simply ```cap myproject:date```
 
