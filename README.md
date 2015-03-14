@@ -1,5 +1,4 @@
-Capi5k is a **proof of concept** for making the deployments on Grid'5000
-(and beyond) easier, reusable and shareable.
+Capi5k is a **proof of concept** for making the deployments on Grid'5000 easier, reusable and shareable.
 
 It consists in a set of conventions over [Capistrano (v2)](https://github.com/capistrano),
 and [bower](http://bower.io/). It also makes use of
