@@ -14,6 +14,7 @@ on [Grid'5000](https://grid5000.fr).
 The quick start will give you a quick overview of what can be done using the project.
 
 At the end you'll be able to
+
 * submit a job
 * deploy nodes
 * run command on nodes
