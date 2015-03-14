@@ -20,6 +20,9 @@ At the end you'll be able to
 * run command on nodes
 * make basic customizations (e.g. changing the number of nodes, defining tasks, grouping nodes into roles)
 
+
+... everything from your laptop !
+
 ### Initialization
 
 * Initializa a new project :
