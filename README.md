@@ -27,7 +27,7 @@ Before going through the tutorial, check the [prerequisites](https://github.com/
 
 ### Initialization
 
-* Initializa a new project :
+* Initialize a new project :
 
 ```bash
 $) xpm init hello
