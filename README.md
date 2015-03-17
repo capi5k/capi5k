@@ -23,6 +23,8 @@ At the end you'll be able to
 
 ... everything from your laptop !
 
+Before going through the tutorial, check the [prerequisites](https://github.com/capi5k/capi5k/wiki/Prerequisites).
+
 ### Initialization
 
 * Initializa a new project :
